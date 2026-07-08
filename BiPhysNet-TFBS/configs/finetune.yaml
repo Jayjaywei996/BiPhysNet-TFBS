@@ -1,0 +1,28 @@
+# Example fine-tuning configuration for BiPhysNet-TFBS.
+# The training entry point currently uses argparse; keep this file as a readable record of recommended settings.
+
+input_dir: ./data/scorpio_42d_dataset_v2
+output_dir: ./outputs/phase2
+pretrained_model_name: ./pretrained/MetaBERTa-local
+phase1_checkpoint: FROM_SCRATCH
+
+train_csv: train_subset.csv
+valid_csv: valid_subset.csv
+test_csv: test_subset.csv
+
+md_ep_train_file: train_subset_features_42d.npy
+md_ep_valid_file: valid_subset_features_42d.npy
+md_ep_test_file: test_subset_features_42d.npy
+
+extra_feature_dim: 42
+kmer_len: 6
+max_len: 128
+batch_size: 64
+accumulate_grad_batches: 4
+num_epochs: 30
+learning_rate: 3.0e-5
+head_lr_mult: 3.0
+consistency_weight: 0.2
+use_focal: true
+focal_alpha: 0.25
+focal_gamma: 2.0

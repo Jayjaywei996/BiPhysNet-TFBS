@@ -1,0 +1,24 @@
+# Example pretraining configuration for BiPhysNet-TFBS.
+# The training entry point currently uses argparse; keep this file as a readable record of recommended settings.
+
+input_dir: ./data/scorpio_42d_dataset_v2
+output_dir: ./outputs/phase1
+pretrained_model_name: ./pretrained/MetaBERTa-local
+
+train_csv: train_subset.csv
+valid_csv: valid_subset.csv
+train_features_npy: train_subset_features_42d.npy
+valid_features_npy: valid_subset_features_42d.npy
+
+feature_dim: 42
+projection_dim: 128
+kmer_len: 6
+max_len: 128
+batch_size: 128
+accumulate_grad_batches: 1
+num_epochs: 30
+learning_rate: 2.0e-4
+weight_decay: 1.0e-5
+warmup_steps: 100
+mlm_lambda: 1.0
+temperature: 0.1
