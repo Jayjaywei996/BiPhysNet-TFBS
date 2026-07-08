@@ -1,0 +1,9 @@
+torch
+pytorch-lightning
+torchmetrics
+transformers
+pandas
+numpy
+scikit-learn
+tqdm
+pytest

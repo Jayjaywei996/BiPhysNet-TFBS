@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this research prototype, please cite this repository."
+title: "BiPhysNet-TFBS: Cross-modal contrastive learning with DNA biophysical features for TFBS prediction"
+type: software
+authors:
+  - family-names: "Wu"
+    given-names: "Jiwei"
+version: "0.1.0"
+date-released: "2026-07-08"
+license: "MIT"
+repository-code: "https://github.com/Jayjaywei996/BiPhysNet-TFBS"
